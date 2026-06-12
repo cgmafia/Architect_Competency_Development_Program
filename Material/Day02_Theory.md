@@ -4,10 +4,6 @@
 
 ---
 
-# PART 1 OF 4: Hands-on Rapid Mapping (Part 2) + DDD Foundations
-
----
-
 # Section 1: Hands-on — Rapid Mapping of Business Goals to Architectural Decisions (Part 2)
 
 ## 1.1 Topic Title and Learning Objectives
@@ -1192,8 +1188,8 @@ Key OAS 3.1 structural elements:
 ```mermaid
 graph TB
     subgraph "Primary Adapters — Driving Side"
-        RC[PropertyRegistrationController\nREST Adapter\n@RestController]
-        KC[RegistrationEventConsumer\nKafka Adapter\n@KafkaListener]
+        RC[PropertyRegistrationController\nREST Adapter-RestController]
+        KC[RegistrationEventConsumer\nKafka Adapter-KafkaListener]
     end
 
     subgraph "Application Core — Land Registry BC"
@@ -1201,8 +1197,8 @@ graph TB
             IP[PropertyRegistrationInputPort\nJava Interface]
         end
         subgraph "Use Cases"
-            SUC[SubmitRegistrationUseCase\n@Service]
-            AUC[ApproveRegistrationUseCase\n@Service]
+            SUC[SubmitRegistrationUseCase-Service]
+            AUC[ApproveRegistrationUseCase-Service]
         end
         subgraph "Domain"
             PR[PropertyRegistration\nAggregate Root]
@@ -3055,73 +3051,6 @@ The following assignments were embedded throughout Day 2. These are designed for
 **Bridge concept from Day 2 to Day 3:**
 The bounded contexts identified today through event storming become the microservice candidates in Day 3's decomposition discussion. The OpenAPI and AsyncAPI contracts designed today become the service mesh contracts in Day 3's workshop. The Jan Seva Portal case study continues as a running example for the Service Mesh Design Workshop.
 
----
-
-## Trainer Delivery Notes
-
-### Timing Guide for Day 2
-
-| Section   | Topic                                                   | Planned Duration         | Buffer |
-| --------- | ------------------------------------------------------- | ------------------------ | ------ |
-| 0:00–0:10 | Day 1 Recap and Day 2 Agenda                            | 10 min                   | —      |
-| 0:10–1:10 | Section 1: BCM Part 2 + Peer Review                     | 60 min                   | 10 min |
-| 1:10–1:20 | Break                                                   | 10 min                   | —      |
-| 1:20–3:10 | Section 2: DDD — BC, Aggregates, UL, Event Storming     | 90 min + 20 min hands-on | 10 min |
-| 3:10–3:20 | Break                                                   | 10 min                   | —      |
-| 3:20–4:20 | Section 3: Hexagonal Architecture + OpenAPI + AsyncAPI  | 60 min                   | 10 min |
-| 4:20–4:30 | Break                                                   | 10 min                   | —      |
-| 4:30–5:00 | Section 4: Interoperability + Versioning                | 30 min                   | 5 min  |
-| 5:00–6:00 | Section 5: Case Study + ATAM                            | 60 min                   | —      |
-| 6:00–6:30 | Day Wrap-up: Key Principles, Assignments, Day 3 Preview | 30 min                   | —      |
-
-**Total: 6.5 hours** (within the 6-8 hour target)
-
-### Energy Management Tips for Trainers
-
-- **Section 1 (BCM Part 2):** Starts as group work — energy is naturally high. Facilitate, do not lecture.
-- **Section 2 (DDD):** The longest conceptual section. Use the hospital analogy upfront to anchor understanding. Do a 10-minute mini event-storming exercise on the board (live) after explaining the notation — do not just show slides.
-- **Section 3 (Hexagonal):** Code walkthrough — pace slowly through the port/adapter structure. Ask participants: "What does this class NOT import?" repeatedly until the pattern is intuitive.
-- **Section 4 (Versioning):** Short section — keep it crisp. Use the railway gauge analogy to open, then move quickly to the comparison table. Avoid spending more than 10 minutes on theoretical REST purity debates.
-- **Section 5 (Case Study):** High energy — team-based design activity. Give teams 20 minutes to design their own version before revealing the proposed architecture. The comparison between team designs and the reference design is the richest learning moment.
-
-### Difficult Participant Profiles and Responses
-
-**The "We already do this" participant:**
-> "Great — so when you say you do DDD, show me your context map. Show me one ADR that documents a bounded context boundary decision. Show me your AsyncAPI contract." Nine times out of ten, they have DDD vocabulary but not DDD practice. Redirect to specifics.
-
-**The "This is too complex for our team" participant:**
-> "Which part feels complex: the concept, or the implementation? The concept — bounded contexts — can be applied as package naming conventions in a monolith today. No microservices, no Kafka. The complexity is incremental." Start with the Modular Monolith as the accessibility ramp.
-
-**The "Our manager will never approve this rewrite" participant:**
-> "Nothing we discussed today requires a rewrite. The Expand-Contract pattern, the ACL, and the Strangler Fig pattern (Day 7) are all about incremental, non-destructive application of these patterns to existing systems. The goal is not to rewrite — it is to stop making the problem worse while gradually improving."
-
----
-
-## Day 2 Theory Document — Completion Confirmation
-
-This concludes the complete Theory Document for Day 2 of the Senior Engineer to Solution Architect Program.
-
-**Coverage verification:**
-
-| Curriculum Item                                               | Covered | Section             |
-| ------------------------------------------------------------- | ------- | ------------------- |
-| Hands-on: Rapid mapping (Part 2)                              | Yes     | Section 1           |
-| DDD: Bounded Contexts, Aggregates, Ubiquitous Language        | Yes     | Section 2           |
-| Event Storming                                                | Yes     | Section 2.2.4       |
-| Context Map and Integration Patterns                          | Yes     | Section 2.2.5       |
-| Hexagonal/Clean Architecture                                  | Yes     | Section 3.2.1–3.2.4 |
-| API-First Design                                              | Yes     | Section 3.2.5       |
-| OpenAPI 3.1                                                   | Yes     | Section 3.5.6       |
-| AsyncAPI 2.6                                                  | Yes     | Section 3.5.7       |
-| Interoperability Patterns                                     | Yes     | Section 4.2.2       |
-| Government Interoperability Frameworks (India, US, Singapore) | Yes     | Section 4.2.1       |
-| API Versioning Strategies (URI, Header, Content Negotiation)  | Yes     | Section 4.2.3       |
-| Semantic Versioning                                           | Yes     | Section 4.2.4       |
-| Backward Compatibility Patterns                               | Yes     | Section 4.2.5       |
-| Interoperability Anti-Patterns                                | Yes     | Section 4.2.6       |
-| Case Study: Interoperable Government Service Mesh             | Yes     | Section 5           |
-| ATAM Analysis                                                 | Yes     | Section 5.2.5       |
-| ADR Documentation                                             | Yes     | Section 5.2.4       |
 
 ---
 

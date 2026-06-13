@@ -104,10 +104,6 @@ Day 4's lab extends the existing DigiGov mesh with:
 
 ---
 
-# PART 1 OF 4: Event Sourcing and CQRS Deep Dive
-
----
-
 # Section 1: Event Sourcing and CQRS — Full Implementation
 
 ## 1.1 Topic Title and Learning Objectives

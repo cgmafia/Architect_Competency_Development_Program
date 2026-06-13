@@ -1264,7 +1264,6 @@ graph TB
 ## 5.4 Workshop Exercise: Rapid Mapping (Part 1)
 
 **Format:** Small groups of 3-4 participants
-**Duration:** 30 minutes
 **Deliverables:** Draft business-capability map and initial bounded context sketch
 
 **Scenario Assigned to Groups:**

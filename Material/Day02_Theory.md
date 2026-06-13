@@ -10,7 +10,6 @@
 
 **Topic:** Completing the Business-Capability-to-Architecture Blueprint
 
-**Duration:** 1.0 hour (continuation from Day 1, Part 1)
 
 **Learning Objectives** — By the end of this section, participants will be able to:
 
@@ -204,7 +203,6 @@ During the 1-hour session, teams complete the following structured gap analysis 
 
 **Topic:** Strategic Domain-Driven Design for Government-Scale Systems
 
-**Duration:** 1.5 hours
 
 **Learning Objectives** — By the end of this section, participants will be able to:
 
@@ -959,7 +957,6 @@ graph LR
 
 **Topic:** Hexagonal Architecture, Clean Architecture, and API-First Design with OpenAPI 3.1 and AsyncAPI 2.6
 
-**Duration:** 1.0 hour
 
 **Learning Objectives** — By the end of this section, participants will be able to:
 
@@ -2097,7 +2094,6 @@ components:
 
 **Topic:** Government API Interoperability Standards, Versioning Strategies, and Backward Compatibility
 
-**Duration:** 0.5 hour
 
 **Learning Objectives** — By the end of this section, participants will be able to:
 
@@ -2446,7 +2442,6 @@ graph TB
 
 **Topic:** Synthesising DDD, Hexagonal Architecture, API-First, and Interoperability into a Government Service Mesh Design
 
-**Duration:** 1.0 hour
 
 **Learning Objectives** — By the end of this section, participants will be able to:
 
